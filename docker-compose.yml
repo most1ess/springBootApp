@@ -12,7 +12,7 @@ services:
 
   app:
     build:
-      context: E:\TestApp
+      context: путь_к_директории_проекта
       dockerfile: Dockerfile
     depends_on:
       - db
