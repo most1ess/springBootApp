@@ -9,7 +9,7 @@
 <h3 align="center">Spring Boot Application</h3>
 
   <p align="center">
-    описание проекта
+    Приложение, позволяющее манипулировать сведениями о клиентах, хранящимися в базе данных.
     <br />
     <a href="https://github.com/most1ess/springBootApp"><strong>Документация »</strong></a>
     <br />
@@ -35,31 +35,23 @@
    ```sh
    git clone https://github.com/most1ess/springBootApp.git
    ```
-2. Установите зависимости
-   ```mvn
-   mvn dependency:resolve
-   ```
-3. В корневой папке проекта создайте файл .env со следующим содержанием
+2. В корневой папке проекта создайте файл .env со следующим содержанием
    ```txt
    DB_USER=имя_пользователя
    DB_PASSWORD=пароль_базы_данных
    DB_NAME=имя_базы_данных
    ```
-4. Убедитесь, что в docker-compose.yml указан верный путь к пакету с вашим проектом
+3. Убедитесь, что в docker-compose.yml указан верный путь к пакету с вашим проектом
    ```txt
    app:
      build:
        context: путь_к_вашему_приложению
    ```
-5. Соберите проект с помощью mvn
+4. Соберите проект с помощью mvn
    ```mvn
    mvn clean package
    ```
-6. В директории target найдите собранный jar-архив. Его имя запишите в Dockerfile
-   ```txt
-   COPY target/имя_вашего_jar_архива app.jar
-   ```
-7. Запустите приложение с помощью docker-compose
+5. Запустите приложение с помощью docker-compose
    ```docker
    docker-compose up --build
    ```
@@ -72,13 +64,15 @@
 <!-- USAGE EXAMPLES -->
 ## Использование
 
+Приложение будет доступно по адресу http://localhost:8080/swagger-ui/index.html.
 
+Реализованы запросы удаления, добавления, обновления и вывода по ID клиентов, а также вывода всех клиентов, находящихся в базе данных.
 
 <p align="right">(<a href="#readme-top">В начало</a>)</p>
 
 
 <!-- CONTACT -->
-## Contact
+## Контакты
 
 Ссылка на проект: [https://github.com/most1ess/springBootApp](https://github.com/most1ess/springBootApp)
 
